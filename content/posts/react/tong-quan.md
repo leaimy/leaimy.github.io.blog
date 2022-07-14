@@ -2,6 +2,12 @@
 title: "Tổng quan"
 date: 2022-07-14T15:50:38+07:00
 draft: true
+description: "Tổng quan React"
+summary: "Tổng quan React"
+tags: 
+- Tổng quan React
+- React
+- Tự học React
 ---
 
 > React được hiểu là một thư viện của Javascript dùng để xây dựng giao diện người dùng
