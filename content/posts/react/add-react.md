@@ -1,5 +1,5 @@
 ---
-title: "Thêm React vào Website"
+title: "Thêm React & React-DOM vào Website"
 date: 2022-07-15T15:37:34+07:00
 draft: true
 description: "Thêm React vào Website, Github, NPMJS, UNPKG"
@@ -7,7 +7,7 @@ summary: "Thêm React vào Website, Github, NPMJS, UNPKG"
 tags: 
 - React
 - Tự học React
-- Thêm React vào Website
+- Thêm React & React-DOM vào Website
 - Github, NPMJS, UNPKG
 ---
 
@@ -25,10 +25,12 @@ tags:
 
 - UNPKG có tác dụng lấy các thư viện được lưu trữ ở NPMJS dưới dạng là cdn (content delivery network - mạng lưới phân phối nội dung).
 
-## 2. Thêm React vào Website theo cú pháp cdn
+## 2. Thêm React & React-DOM vào Website theo cú pháp cdn
 
-> Copy cái này:  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script> dán bên dưới thẻ title trong file html
+> Copy cái này:  `<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>` dán bên dưới thẻ title trong file html để thêm React vào Website
+> Sau đó copy cái này: `<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>` dán bên dưới cú pháp trên để thêm React-DOM vào Website
 
+Giống đoạn code phía dưới:
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -38,6 +40,7 @@ tags:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReactJS</title>
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
 </head>
 <body>
     <h1>Add React to website</h1>
@@ -48,7 +51,7 @@ tags:
 </html>
 ```
 
-- Để kiểm tra nhúng thư viện React vào trang web có thành công hay không chúng ta tiến hành gõ lệnh *React* trên cửa sổ console
+- Để kiểm tra nhúng thư viện React và React-DOM vào trang web có thành công hay không chúng ta tiến hành gõ lệnh *React* trên cửa sổ console
 
 ## 3. Tài liệu chính thức của React
 
