@@ -73,10 +73,13 @@ Bây giờ muốn thêm
 #### React element
 
 HTML ở đây là:
+
 ```
 <div id="root"></div>
 ```
+
 Bây giờ, để thêm `<h1 title="Hello" class="heading">Hello Hà!</h1>` vào element root bằng React như sau
+
  ```
     const root = document.getElementById('root')
     const h1React = React.createElement('h1', {
@@ -130,7 +133,6 @@ const ulReact = React.createElement(
 
 ReactDOM.render(ulReact, root)
 ```
-
 
 ## 4. Bài tập
 

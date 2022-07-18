@@ -31,6 +31,7 @@ tags:
 > Sau đó copy cái này: `<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>` dán bên dưới cú pháp trên để thêm React-DOM vào Website
 
 Giống đoạn code phía dưới:
+
 ```
 <!DOCTYPE html>
 <html lang="en">
