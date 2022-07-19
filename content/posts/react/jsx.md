@@ -94,3 +94,46 @@ Như code mẫu bên dưới:
 - Code JSX ngắn hơn, dễ hiểu hơn code JS.
 - JSX không làm thay đổi ngữ nghĩa của Javascript
 - Với cách viết gần với các thẻ HTML, nó giúp những developers thông thường (ví dụ như các designer) có thể hiểu được một cách dễ dàng, từ đó có thể viết hoặc sửa code mà không gặp nhiều khó khăn.
+
+## 5. Giải đáp câu hỏi
+
+- Tại sao khi code thuần dùng map phải join()...?
+
+> Dùng để chuyển mảng thành chuỗi để cho innerHTML nhận được giá trị chuỗi mà nó mong muốn
+
+- Gặp lỗi khi render từ mảng (prop "key")?
+
+> Cách sửa lỗi:
+
+```
+ const ul = <ul> 
+            { courses.map((course, index) => <li key={index}>{course.name}</li>)}
+            </ul>
+ReactDOM.render(ul, document.getElementById('root'))
+```
+
+- Không render được 2 elements cùng lúc?
+
+> Thẻ React.Fragment là một thẻ phổ biến trong React là một thành phần trả về nhiều phần tử. Các phân đoạn cho phép bạn nhóm một danh sách con mà không cần thêm các nút bổ sung vào DOM.
+
+```
+const jsx = (
+            <React.Fragment>
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+            </React.Fragment>
+        )
+```
+
+> tương đương với React.createElement() như sau:
+
+```
+const jsx = React.createElement(
+            React.Fragment, 
+            null, 
+            React.createElement('h1', null, 'Heading 1'),
+            React.createElement('h2', null, 'Heading 2')
+            )
+
+ReactDOM.render(jsx, document.getElementById('root'))
+```
