@@ -56,3 +56,38 @@ const app = <Content />
 ```
 
 Class component và Function component là tương đương nhau dưới góc độ của React.
+
+## 3. Tạo component
+
+Các components có thể tham chiếu đến các components khác tại đầu ra của chúng. 
+
+Ví dụ, chúng ta có thể tạo ra `App` component mà nó sẽ render ra `PostItem` nhiều lần:
+
+```
+function PostItem() {
+    return (
+            <div class="post-item">
+                <img src="https://files.fullstack.edu.vn/f8-prod/blog_posts/311/6147eea9cef9c.png" alt="" />
+                <h2 class="post-title">C#(.NET) - Tương tác với file Excel</h2>
+                <p class="post-desc">Tiến hành đọc file dữ liệu => phân tích dữ liệu => Xuất ra file Excel theo mẫu cho sẵn.</p>
+                <p class="post-published">10 tháng trước</p>
+            </div>    
+    )
+}
+
+
+function App(){
+    return (
+    <div class="posts-list">
+        <PostItem />
+        <PostItem />
+        <PostItem />
+        <PostItem />
+        <PostItem />
+    </div>
+)
+}
+
+
+ReactDOM.render(<App />, document.getElementById('root'))
+```
