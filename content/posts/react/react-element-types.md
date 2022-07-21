@@ -57,7 +57,7 @@ const app = <Content />
 
 Class component và Function component là tương đương nhau dưới góc độ của React.
 
-## 3. Tạo component
+## 4. Tạo component
 
 Các components có thể tham chiếu đến các components khác tại đầu ra của chúng. 
 
