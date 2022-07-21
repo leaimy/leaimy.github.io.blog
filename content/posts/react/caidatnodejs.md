@@ -20,7 +20,7 @@ tags:
 ## 2. Tại sao phải sử dụng NodeJS?
 
 - NodeJS giúp bật lên một web server mà không cần dùng đến live server nữa.
-- NodeJS sẽ giải quyết được một số vấn đề lặp đi lặp lại code, khi cài NodeJS nó sẽ tự động cài quản lý thư viện npm mà npm có đầy đủ thư viện liên quan đến dự án React vậy nên không cần phải thêm react, reactdom, bable... trong từng dữ án nữa, mỗi dự án chỉ cần import rồi dùng thôi.
+- NodeJS sẽ giải quyết được một số vấn đề lặp đi lặp lại code, khi cài NodeJS nó sẽ tự động cài quản lý thư viện npm mà npm có đầy đủ thư viện liên quan đến dự án React vậy nên không cần phải thêm react, reactdom, bable... trong từng dữ án nữa, mỗi dự án chỉ cần install và import rồi dùng thôi.
 
 ## 3. Cài đặt môi trường NodeJS
 
