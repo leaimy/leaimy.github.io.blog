@@ -30,6 +30,7 @@ tags:
 
 - Callback luôn được gọi sau khi component mounted
 - Cleanup function luôn được gọi trước khi component unmounted
+- Cleanup function luôn được gọi trước khi callback được gọi (trừ lần mounted)
 - Có 3 kiểu cấu trúc của useEffect:
 
     > #### useEffect(callback)
@@ -204,3 +205,93 @@ const Content = () => {
 export default Content;
 
 ```
+
+## 4. useEffect with timer functions
+
+> Với setInterval()
+
+```jsx
+import { useEffect, useState } from "react";
+
+const Content = () => {
+  const [countdown, setCountdown] = useState(180);
+
+  useEffect(() => {
+    const timerId = setInterval(() => {
+      setCountdown((prevState) => prevState - 1);
+    }, 1000);
+
+    return () => clearInterval(timerId);
+  }, []);
+
+  return (
+    <div>
+      <h1>{countdown}</h1>
+    </div>
+  );
+};
+
+export default Content;
+
+```
+
+> Với setTimeout()
+
+```jsx
+import { useEffect, useState } from "react";
+
+const Content = () => {
+  const [countdown, setCountdown] = useState(180);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setCountdown(countdown - 1);
+    }, 1000);
+  }, [countdown]);
+
+  return (
+    <div>
+      <h1>{countdown}</h1>
+    </div>
+  );
+};
+
+export default Content;
+
+```
+
+## 5. useEffect with preview avatar
+
+```jsx
+import { useEffect, useState } from "react";
+
+const Content = () => {
+  const [avatar, setAvatar] = useState();
+
+  useEffect(() => {
+    return () => {
+      avatar && URL.revokeObjectURL(avatar.preview);
+    };
+  }, [avatar]);
+
+  const handlePreviewAvatar = (e) => {
+    const file = e.target.files[0];
+
+    file.preview = URL.createObjectURL(file);
+
+    setAvatar(file);
+  };
+  return (
+    <div>
+      <input type="file" onChange={handlePreviewAvatar} />
+      {avatar && <img src={avatar.preview} alt="" width="80%" />}
+    </div>
+  );
+};
+
+export default Content;
+
+```
+
+## 6. useEffect with fake Chat App
+
