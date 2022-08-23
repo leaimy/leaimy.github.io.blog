@@ -270,6 +270,7 @@ const Content = () => {
 
   useEffect(() => {
     return () => {
+      // Tránh việc ảnh bị rò rỉ ra bên ngoài
       avatar && URL.revokeObjectURL(avatar.preview);
     };
   }, [avatar]);

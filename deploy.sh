@@ -6,7 +6,7 @@ set -e
 printf "\033[0;32mDeploying updates to GitHub...\033[0m\n"
 
 # Create commit message
-msg="rebuilding site $(date) 🌼🍨🤤"
+msg="rebuilding site $(date) 🍀❄🍓"
 if [ -n "$*" ]; then
 	msg="$*"
 fi
