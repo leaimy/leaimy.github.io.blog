@@ -11,6 +11,7 @@ tags:
 - Tự học React
 ---
 
+> `useCallback` giúp tránh tạo ra những hàm mới một cách không cần thiết trong function component.
 
 ## 1. Giới thiệu useCallback
 
