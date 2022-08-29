@@ -83,8 +83,6 @@ export default Paragraph;
 
 > Khi sử dụng Context
 
-- Để tạo context, bạn phải import `createContext` và khởi tạo nó:
-
 File *`App.js`*
 
 ```jsx
@@ -134,7 +132,7 @@ import { useContext } from "react";
 import { ThemeContext } from "../App.js";
 
 const Paragraph = () => {
-    
+
     const theme = useContext(ThemeContext);
 
   return (
