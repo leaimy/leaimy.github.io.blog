@@ -31,7 +31,7 @@ tags:
 Đây là một ví dụ về `useReducer`:
 
 ```jsx
-import { useReducer, useState } from "react";
+import { useReducer } from "react";
 
 // useState
 // 1. Init state: 0
@@ -82,7 +82,7 @@ export default App;
 ## 3. Bài tập Todo dùng useReducer
 
 ```jsx
-import { useReducer, useRef, useState } from "react";
+import { useReducer, useRef } from "react";
 
 // useReducer
 // 1. Init state
