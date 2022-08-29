@@ -5,11 +5,13 @@ draft: true
 description: "Tìm hiểu useContex hook"
 summary: "Tìm hiểu useContex hook"
 tags:
-- useContext hook
-- Hook
-- React
-- Tự học React
+  - useContext hook
+  - Hook
+  - React
+  - Tự học React
 ---
+
+> Đơn giản hoá việc truyền dữ liệu từ component cha xuống component con mà không cần sử dụng tới props
 
 ## 1. Tổng quan useContext hook
 
@@ -23,7 +25,7 @@ tags:
 
 > Khi chưa sử dụng React Context: Chuyển `props` qua các `component` lồng nhau
 
-File *`App.js`*
+File _`App.js`_
 
 ```jsx
 import { useState } from "react";
@@ -45,10 +47,9 @@ function App() {
 }
 
 export default App;
-
 ```
 
-File *`Content.js`*
+File _`Content.js`_
 
 ```jsx
 import Paragraph from "./Paragraph";
@@ -57,10 +58,9 @@ const Content = ({ theme }) => {
 };
 
 export default Content;
-
 ```
 
-File *`Paragraph.js`*
+File _`Paragraph.js`_
 
 ```jsx
 const Paragraph = ({ theme }) => {
@@ -83,7 +83,7 @@ export default Paragraph;
 
 > Khi sử dụng Context
 
-File *`App.js`*
+File _`App.js`_
 
 ```jsx
 import { useState, createContext } from "react";
@@ -91,7 +91,6 @@ import Content from "./Context/Content";
 import "./App.css";
 
 const ThemeContext = createContext();
-
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -101,39 +100,36 @@ function App() {
   };
   return (
     <ThemeContext.Provider value={theme}>
-        <div style={{ padding: "20px" }}>
-            <button onClick={toggleTheme}>Toggle theme</button>
-            <Content  />
-        </div>
+      <div style={{ padding: "20px" }}>
+        <button onClick={toggleTheme}>Toggle theme</button>
+        <Content />
+      </div>
     </ThemeContext.Provider>
-    
   );
 }
 
 export default App;
 ```
 
-File *`Content.js`*
+File _`Content.js`_
 
 ```jsx
 import Paragraph from "./Paragraph";
 const Content = () => {
-  return <Paragraph  />;
+  return <Paragraph />;
 };
 
 export default Content;
-
 ```
 
-File *`Paragraph.js`*
+File _`Paragraph.js`_
 
 ```jsx
 import { useContext } from "react";
 import { ThemeContext } from "../App.js";
 
 const Paragraph = () => {
-
-    const theme = useContext(ThemeContext);
+  const theme = useContext(ThemeContext);
 
   return (
     <p className={theme}>
