@@ -90,6 +90,13 @@ import { useState, createContext } from "react";
 import Content from "./Context/Content";
 import "./App.css";
 
+// Context
+// CompA => CompB => CompC
+
+// 1. Create context
+// 2. Provider (nhà cung cấp)
+// 3. Consumer (nhận dữ liệu từ nhà cung cấp)
+
 const ThemeContext = createContext();
 
 function App() {
@@ -126,7 +133,7 @@ File _`Paragraph.js`_
 
 ```jsx
 import { useContext } from "react";
-import { ThemeContext } from "../App.js";
+import { ThemeContext } from "../App";
 
 const Paragraph = () => {
   const theme = useContext(ThemeContext);
